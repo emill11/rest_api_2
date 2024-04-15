@@ -3,8 +3,6 @@ import allure
 import curlify
 import logging
 
-DOMAIN_URL = 'https://demowebshop.tricentis.com/'
-
 
 def log_post_request(url, **kwargs):
     with allure.step(f"POST {url}"):

@@ -17,7 +17,7 @@ def test_add_to_cart_laptop():
         requests.post(add_to_cart_url, cookies={"NOPCOMMERCE.AUTH": cookie})
 
     with allure.step("Open cart page"):
-        browser.open("http://demowebshop.tricentis.com")
+        browser.open("https://demowebshop.tricentis.com")
         browser.driver.add_cookie({"name": "NOPCOMMERCE.AUTH", "value": cookie})
         browser.open("https://demowebshop.tricentis.com/cart")
 

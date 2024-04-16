@@ -22,8 +22,8 @@ def test_add_to_cart_laptop():
         browser.open("https://demowebshop.tricentis.com/cart")
 
     with allure.step("Check item in cart"):
-        browser.element(".cart-item-row .qty-input").should(have.value('1'))
+        browser.all(".cart-item-row")[-1].element(".qty-input").should(have.value('1'))
 
     with allure.step("Remove item from cart"):
-        browser.all(".remove-from-cart").element(-1).element('input[type="checkbox"]').click()
+        browser.all(".remove-from-cart")[-1].element('input[type="checkbox"]').click()
         browser.element(".button-2.update-cart-button").click()
